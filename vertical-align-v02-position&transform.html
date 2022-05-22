@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Menu responsive - with position & transform:translate</title>
+    <link rel="stylesheet" href="vertical-align-v02-position&transform.css" />
+  </head>
+  <body>
+    <p>Menu responsive - with position & transform:translate</p>
+    <p>
+      * Made the .nav-container to be position relative in order to be able to
+      apply position absolute to last div (the burger menu)
+    </p>
+    <p>
+      * Also made the first div (home) to be relative too, in order to apply
+      position absolute to it's child > paragraph
+    </p>
+    <p>
+      * Applied position relative to right-menu-wrapper class and defined
+      separate classes for each child div's, in order to apply them separate
+      position abolsute, each one with own left: ...px;
+    </p>
+    <p>&nbsp;</p>
+    <nav class="nav-container">
+      <div class="home"><p>Home</p></div>
+      <div class="right-menu-wrapper">
+        <div class="inline news">News</div>
+        <div class="inline contact">Contact</div>
+        <div class="inline about">About</div>
+      </div>
+      <div class="menu-burger">
+        <img src="icon-menu-hamburger-v01-export.png" alt="menu" width="30px" />
+      </div>
+    </nav>
+  </body>
+</html>

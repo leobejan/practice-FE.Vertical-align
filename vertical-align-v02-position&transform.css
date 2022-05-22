@@ -1,0 +1,89 @@
+:root {
+  --inaltime-linie: 90px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 3% 0 3%;
+}
+.inline {
+  display: inline-block;
+}
+.nav-container {
+  background-color: rgb(52, 54, 54);
+  font-family: Arial;
+  color: white;
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: var(--inaltime-linie);
+  grid-template-areas: "left right";
+  /* position relative added bellow, in order to apply aboslute to burger menu :( */
+  position: relative;
+}
+
+.home {
+  background-color: rgb(71, 124, 71);
+  grid-area: left;
+
+  position: relative;
+}
+.home > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* or, text-align: center --> for horizontal align */
+}
+
+.right-menu-wrapper {
+  grid-area: right;
+
+  position: relative;
+}
+.right-menu-wrapper > div {
+  /* THE ABOVE POSITION WILL NOT WORK FOR REST OF MENU ITEMS because
+  all 3 div's must have their own css class 
+  AND MIST IMPORTANT, positioning with left: should be different
+  THIS IS NOT OK*/
+}
+
+.right-menu-wrapper .news {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.right-menu-wrapper .contact {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+}
+.right-menu-wrapper .about {
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  transform: translateY(-50%);
+}
+
+.menu-burger {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .right-menu-wrapper {
+    display: none;
+  }
+  .menu-burger {
+    grid-area: right;
+    justify-self: end;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --inaltime-linie: 90px;
+  --padding-left-2divs: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 3% 0 3%;
+}
+.inline {
+  /* display: inline-block; */
+  /* removed, because was useful only on previous 
+  examples (with line-heigh & position+transform; 
+  now we use flex) */
+}
+.nav-container {
+  background-color: rgb(52, 54, 54);
+  font-family: Arial;
+  color: white;
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: var(--inaltime-linie);
+  grid-template-areas: "left right";
+}
+
+.home {
+  background-color: rgb(71, 124, 71);
+  grid-area: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-menu-wrapper {
+  grid-area: right;
+
+  padding-left: var(--padding-left-2divs);
+  display: flex;
+  align-items: center;
+  column-gap: var(--padding-left-2divs);
+}
+
+.menu-burger {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .right-menu-wrapper {
+    display: none;
+  }
+  .menu-burger {
+    grid-area: right;
+    justify-self: end;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

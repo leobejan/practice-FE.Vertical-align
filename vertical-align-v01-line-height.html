@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Menu responsive - with line-height</title>
+    <link rel="stylesheet" href="vertical-align-v01-line-height.css" />
+  </head>
+  <body>
+    <p>Menu responsive - with line-height</p>
+    <p>&nbsp;</p>
+    <p>
+      * If we use line-height for vertical alignment, in div .home and
+      .right-menu-wrapper looks ok, but on last div when shown on mobile
+      (.menu-burger) the vertical alignment works ONLY FOR TEXT; if we insert an
+      image will not correctly lined up.
+    </p>
+    <p>
+      * To test, I leaved the word "< p >Menu< / p >" commented in html code
+    </p>
+    <p>
+      * In ordert to fix this, we need to add an padding-top to .menu-burger (in
+      this case was needed 10px)
+    </p>
+    <p>&nbsp;</p>
+    <nav class="nav-container">
+      <div class="home"><p>Home</p></div>
+      <div class="right-menu-wrapper">
+        <div class="inline news">News</div>
+        <div class="inline contact">Contact</div>
+        <div class="inline about">About</div>
+      </div>
+      <div class="menu-burger">
+        <!-- <p>Menu</p> -->
+        <p>
+          <img
+            src="icon-menu-hamburger-v01-export.png"
+            alt="menu"
+            width="30px"
+            height="30px"
+          />
+        </p>
+      </div>
+    </nav>
+  </body>
+</html>
